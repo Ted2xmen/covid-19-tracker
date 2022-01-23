@@ -5,6 +5,7 @@
             <h3 class="font-bold text-3xl p-1 m-1">
                 {{localTitle}} 
             </h3>
+            <img :src="`https://countryflagsapi.com/png/${localStats.CountryCode}`" width="150" :alt="localStats.CountryCode">
             <h2>Country Code : {{localStats.CountryCode}} </h2>
             <span class="font-bold">New: </span>
             {{localStats.TotalConfirmed}}

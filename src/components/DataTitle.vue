@@ -2,7 +2,7 @@
 <div class="text-3xl">
     {{text}} 
     <div class="text-2xl">
-        {{timeStamp}}
+        {{timeStamp}} 
     </div>
 </div>
 </template>
