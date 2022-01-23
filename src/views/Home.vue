@@ -1,18 +1,25 @@
 <template>
   <main class="flex flex-col align-center justify-center text-center" v-if="!loading">
-    Show data...
+    <DataTitle :text='title' :dataDate='dataDate' />
+    <DataBoxes :stats='stats' />
   </main>
 
  <main class="flex flex-col align-center justify-center text-center" v-else>
    <div class="text-gray-500 text-3l">Fetching data..</div>
    <img :src="loadingImage" class="mx-auto" width="125" alt="">
  </main>
-
 </template>
+
 <script>
+import DataTitle from '@/components/DataTitle.vue';
+import DataBoxes from '@/components/DataBoxes.vue';
+
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    DataTitle,
+    DataBoxes
+  },
   data() {
     return {
       loading: true,
