@@ -3,20 +3,20 @@
         <!-- box 1 -->
         <div class="shadow-xl text-center rounded p-7 bg-blue-600">
             <h3 class="font-bold text-3xl p-1 m-1">
-                {{localTitle}}
+                {{localTitle}} 
             </h3>
+            <h2>Country Code : {{localStats.CountryCode}} </h2>
             <span class="font-bold">New: </span>
-            Local box new
+            {{localStats.TotalConfirmed}}
             <br>
             <span class="font-bold">Total: </span>
-            local box total
+            {{localStats.TotalDeaths}}
         </div>
     </div>
 </template>
 <script>
 export default {
     name: 'LocalBox',
-    props: ['localTitle'],
-    
+    props: ['localTitle', 'localStats'],
 }
 </script>

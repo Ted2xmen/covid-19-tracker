@@ -2,8 +2,8 @@
   <main class="flex flex-col align-center justify-center text-center" v-if="!loading">
     <DataTitle :text='title' :dataDate='dataDate' />
     <DataBoxes :stats='stats' />
-    <LocalBox @get-country='getLocalData' :localTitle='localTitle' />
-    <CountrySelect :countries='countries'/>
+    <CountrySelect @get-country='getLocalData' :countries='countries'/>
+    <LocalBox  :localTitle='localTitle' :localStats='localStats'/>
   </main>
 
  <main class="flex flex-col align-center justify-center text-center" v-else>
@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      localTitle: '',
+      localTitle: '' || 'Choose country',
       localStats: {},
       loading: true,
       title: 'Global',
@@ -47,7 +47,8 @@ export default {
     },
     getLocalData(country) {
       this.localTitle = country.Country;
-      console.log('sdasd');
+      this.localStats = country;
+      console.log(this.localStats);
     }
   },
   async created() {

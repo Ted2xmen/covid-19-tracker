@@ -19,10 +19,6 @@
             {{numberWithCommas(stats.TotalDeaths)}}
         </div>
     </div>
-
-
-       
-   
 </template>
 <script>
 export default {
