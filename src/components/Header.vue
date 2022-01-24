@@ -1,5 +1,5 @@
 <template>
-    <header class="text-center text-white  bg-blue-800 p-4 mb-10">
+    <header class="text-center text-white shadow-md rounded-xl mt-3  bg-blue-600 p-5 mb-10">
         <div class="text-3xl md:text-5xl font-bold mb-3">
             <i class="fa fa-viruses"></i>
             Covid 19 Tracker</div>

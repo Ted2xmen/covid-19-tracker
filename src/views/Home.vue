@@ -1,9 +1,13 @@
 <template>
   <main class="flex flex-col align-center justify-center text-center" v-if="!loading">
+    <div class="border-2 p-5 m-10 shadow-lg rounded-xl">
     <DataTitle :text='title' :dataDate='dataDate' />
     <DataBoxes :stats='stats' />
+    </div>
+    <div class="border-2 p-5 m-10 shadow-md rounded-xl">
     <CountrySelect @get-country='getLocalData' :countries='countries'/>
     <LocalBox  :localTitle='localTitle' :localStats='localStats'/>
+    </div>
   </main>
 
  <main class="flex flex-col align-center justify-center text-center" v-else>
