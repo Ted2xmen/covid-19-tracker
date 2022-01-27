@@ -22,6 +22,8 @@
             <br>
             <span class="font-bold">Total: </span>
             {{localStats.TotalDeaths}}
+            country info: {{countryInfo}}
+            
         </div>
     </div>
 </template>
@@ -29,5 +31,26 @@
 export default {
     name: 'LocalBox',
     props: ['localTitle', 'localStats'],
+    data() {
+        return {
+            countryInfo: [],
+         
+        }
+    },
+    methods: {
+        
+    async fetchCountryData(code) {
+     const res = await fetch('https://restcountries.com/v3.1/all');
+     const data = await res.json(); 
+     let filtered = data.filter(item => item.cca2 === code);
+     this.countryInfo.push(filtered);
+     console.log(filtered);
+     
+    },
+    },
+    
+     created() {
+     this.fetchCountryData(this.localStats.CountryCode);
+    }
 }
 </script>

@@ -51,15 +51,16 @@ export default {
       const data = await res.json();
       return data;
     },
+
     getLocalData(country) {
       this.localTitle = country.Country;
       this.localStats = country;
-      console.log(this.localStats);
+      // console.log(this.localStats);
     }
   },
   async created() {
     const data = await this.fetchCovidData();
-    console.log(data);
+    // console.log(data);
     this.dataDate = data.Date;
     this.stats = data.Global;
     this.countries = data.Countries;
