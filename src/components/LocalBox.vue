@@ -13,7 +13,9 @@
       />
       <h2>Country Code : {{ localStats.CountryCode }}</h2>
       <div class="p-2">
-        <span class="font-bold">New Confirmed: </span>
+        <span class="font-bold">New Confirmed: 
+            
+        </span>
         {{ localStats.TotalConfirmed }}
         <br />
         <span class="font-bold">Total Deaths: </span>

@@ -1,5 +1,8 @@
 <template>
- <h2 class="text-3xl">Countries</h2>
+ <h2 class="text-3xl">
+     <i class="far fa-flag"></i>
+     Countries
+ </h2>
     <div class="m-5">
         <select 
             @change="onChange()"

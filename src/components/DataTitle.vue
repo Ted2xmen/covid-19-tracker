@@ -1,6 +1,6 @@
 <template>
 <div class="text-3xl">
-    {{text}} 
+    {{text}} <i class="fas fa-globe-americas"></i>
     <div class="text-2xl">
         {{timeStamp}} 
     </div>

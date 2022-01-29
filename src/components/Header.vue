@@ -3,7 +3,7 @@
         <div class="text-3xl md:text-5xl font-bold mb-3">
             <i class="fa fa-viruses"></i>
             Covid 19 Tracker</div>
-        <p>API by {{mode}} </p>
+      
 
      <label class="switch">
   <input v-model="mode" type="checkbox">
