@@ -1,7 +1,7 @@
 <template>
   <main class="flex flex-col align-center justify-center text-center" v-if="!loading">
     <div>
-      <LinkBoxes />
+    <LinkBoxes />
     </div>
     <div class="border-2 p-5 m-10 shadow-lg rounded-xl">
     <DataTitle :text='title' :dataDate='dataDate' />
@@ -12,7 +12,8 @@
     <LocalBox  :localTitle='localTitle' :localStats='localStats'/>
     </div>
   </main>
- <main class="flex flex-col align-center justify-center text-center" v-else>
+  <!-- v-else  -->
+  <main class="flex flex-col align-center justify-center text-center" v-else>
    <div class="text-gray-500 text-3l">Fetching data..</div>
    <img :src="loadingImage" class="mx-auto" width="125" alt="">
  </main>

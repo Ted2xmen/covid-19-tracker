@@ -1,30 +1,28 @@
 <template>
-    <header class="text-center text-white shadow-md rounded-xl mt-3  bg-blue-600 p-5  mb-5">
-        <div class="text-3xl md:text-5xl font-bold mb-3">
-            <i class="fa fa-viruses"></i>
-            Covid 19 Tracker</div>
-      
-
-     <label class="switch">
-  <input v-model="mode" type="checkbox">
-  <span class="slider round"></span>
-</label>
-    </header>
+  <header class="text-center text-white shadow-md rounded-xl mt-3 bg-blue-600 p-5 mb-5">
+    <div class="text-3xl md:text-5xl font-bold mb-3">
+      <i class="fa fa-viruses"></i>
+      Covid 19 Tracker
+    </div>
+    <label class="switch">
+      <input v-model="mode" type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+  </header>
 </template>
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   data() {
-      return {
-          mode: true,
-      }
-  }
+    return {
+      mode: true,
+    };
+  },
 };
 </script>
 
 <style>
-
- /* The switch - the box around the slider */
+/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -48,8 +46,8 @@ export default {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -60,16 +58,16 @@ export default {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -85,5 +83,5 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-} 
+}
 </style>
